@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+
+<body>
+<form action="" th:action="@{/activity tracker}" th:object="${activity tracker}" method="post">
+<table>
+
+        <h3>Activity Tracker</h3>
+    <div class="form-group row">
+        <label for="time" class="cols-sm-4-form-label">Time: </label>
+        <div class="col-md-offset-5 col-md-5">
+            <input type="time" class="form-control" id="time" name="time" th:field="*{time}"  />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="date" class="cols-sm-4-form-label">Date: </label>
+        <div class="col-md-offset-5 col-md-5">
+            <input type="date" class="form-control" id="date" name="time" th:field="*{date}" />
+        </div>
+    </div>
+
+        <div class="form-group row">
+            <div class="col-md-offset-5 col-md-5">
+            <label for="ActivityName" class="cols-sm-4-form-label">ActivityName: </label>
+        <select name="ActivityName" id="ActivityName">
+            <option value="select">SELECT</option>
+            <option value="Training">Training</option>
+            <option value="project">project</option>
+            <option value="meeting">meeting</option>
+            <option value="seminar">seminar</option>
+            <option value="Teamcollabration">Teamcollabration</option>
+            <option value="lunch(45min)">lunch(45min)</option>
+            <option value="break1(15min)">break1(15min)</option>
+            <option value="break2(15min)">break2(15min)</option>
+        </select>
+        </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="comments" class="cols-sm-4-form-label">Comments: </label>
+            <div class="col-md-offset-5 col-md-5">
+                <input type="text" class="form-control" id="comments" name="comments" th:field="*{comments}" />
+            </div>
+        </div></br>
+
+
+        <td><input type="submit" value="submit" /></td>
+
+    </div>
+</table>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
